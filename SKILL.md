@@ -1,5 +1,5 @@
 ---
-name: kargul-ui
+name: magic-ui
 description: Master design skill for anything dashboard related (dashboards, consoles, ops and map views, CRM and admin UIs, KPI pages) and for slide decks in the same look (pitches, reviews, readouts via the Slides artifact type), in the Kargul Studio visual language from the MIT kargulstudio/sales-crm reference. Use when designing, building, restyling, decluttering or reviewing any dashboard, in React + Tailwind v4 or as a single HTML file or Claude artifact. Covers copy rules (fewer words, show exceptions), page anatomy, map-first floating-card and table-first layouts, fit-to-one-screen with no scrolling, KPI tiles, the sidebar shell, header tabs, dense tables, outline grids, filter menus, tags and badges, segment bars, sparklines, a cmd-K palette, overlays and motion, pill buttons with layered shadows, a measured fit audit, and process-mapping patterns (handoff map, three-state ownership, gaps panel, knowledge pages, hierarchy switcher). Ships light and dark tokens with WCAG contrast, plus a framework-free CSS version.
 ---
 
