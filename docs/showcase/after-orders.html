@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>After: refund</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/magic-plain.css">
+<script>if(location.hash==='#dark')document.documentElement.dataset.theme='dark'</script>
+<style>
+html,body{height:100%}body{overflow:hidden}
+.bar{height:56px;display:flex;align-items:center;gap:16px;padding:0 24px;border-bottom:1px solid var(--border)}
+.logo{font-weight:600;display:flex;align-items:center;gap:8px}.logo i{width:18px;height:18px;border-radius:5px;background:var(--foreground)}
+.bar .k-asof{margin-left:auto}
+header{padding:22px 24px 16px}h1{margin:0;font-size:22px;font-weight:600;letter-spacing:-.02em}
+.say{margin:6px 0 0;color:var(--muted-foreground)}.say b{color:var(--foreground);font-weight:500}
+.list{margin:0 24px;padding:6px;width:calc(100% - 448px)}
+.r{display:grid;grid-template-columns:1fr 150px 90px;align-items:center;gap:12px;padding:12px 14px;border-bottom:1px solid var(--border)}
+.r:last-child{border-bottom:0}.r .k-meta{display:block;font-size:11px}.r .num{text-align:right}.r .k-pill{justify-self:start}
+.k-dimmable.is-dimmed>.r:not(.k-lifted){filter:blur(2.5px);opacity:.45}
+.k-lifted{border-bottom:0}
+.dh{padding:20px 20px 14px;display:flex;justify-content:space-between;align-items:start}
+.dh h2{margin:0;font-size:17px;font-weight:600;letter-spacing:-.01em}
+.db{padding:0 20px;display:flex;flex-direction:column;gap:14px;flex:1}
+.k-eyebrow{margin:6px 0 -4px}
+.thumb{width:36px;height:36px;border-radius:8px;background:var(--card);display:grid;place-items:center;font-size:17px}
+.box{width:18px;height:18px;border-radius:5px;background:var(--foreground);color:var(--background);display:grid;place-items:center;font-size:12px}
+.box.off{background:transparent;box-shadow:inset 0 0 0 1.5px var(--line-strong)}
+.k-radio-card div{flex:1}.k-radio-card small{display:block;color:var(--muted-foreground);font-size:12px}
+.dot{width:16px;height:16px;border-radius:50%;box-shadow:inset 0 0 0 1.5px var(--line-strong)}
+[aria-checked="true"] .dot{box-shadow:inset 0 0 0 5px var(--foreground)}
+.df{padding:16px 20px 20px;display:flex;gap:8px}.df .k-btn{height:40px;padding:0 18px;font-size:13.5px}.df .ink{flex:1}
+</style></head><body>
+<div class="bar"><span class="logo"><i></i>Harbor &amp; Pine</span>
+<nav class="k-seg"><button>Overview</button><button>Pipeline</button><button aria-pressed="true">Orders</button><button>About</button></nav>
+<span class="k-asof">Synced 2 min ago</span></div>
+<header><h1>Orders</h1><p class="say"><b>2 refunds</b> waiting · <b>$1.6K</b> shipped today</p></header>
+<div class="k-card list k-dimmable is-dimmed">
+<div class="r k-lifted"><span>Maya Kealoha<span class="k-meta">ORD-20931 · 4 items</span></span><span class="k-pill act">Refund asked</span><span class="num">$98.00</span></div>
+<div class="r"><span>Daniel Ito<span class="k-meta">ORD-20930 · 2 items</span></span><span class="k-pill ok">Shipped</span><span class="num">$240.00</span></div>
+<div class="r"><span>Sofia Reyes<span class="k-meta">ORD-20929 · 7 items</span></span><span class="k-pill wait">Packing</span><span class="num">$1,120.00</span></div>
+<div class="r"><span>Noah Akana<span class="k-meta">ORD-20928 · 1 item</span></span><span class="k-pill">Delivered</span><span class="num">$64.00</span></div>
+<div class="r"><span>Keoni Brandt<span class="k-meta">ORD-20927 · 3 items</span></span><span class="k-pill act">Refund asked</span><span class="num">$310.00</span></div>
+</div>
+<aside class="k-drawer" data-state="open">
+<div class="dh"><div><h2>Refund Maya</h2><span class="k-meta">ORD-20931 · Visa 4242</span></div><button class="k-btn" aria-label="Close">✕</button></div>
+<div class="db">
+<div class="k-callout">“Two of the lanterns arrived cracked.”</div>
+<span class="k-eyebrow">What's coming back</span>
+<div>
+<div class="k-check-row" aria-checked="true"><span class="thumb">🏮</span><span>Paper lantern, large</span><span class="price num">$46.00</span><span class="box">✓</span></div>
+<div class="k-check-row" aria-checked="true"><span class="thumb">🏮</span><span>Paper lantern, large</span><span class="price num">$46.00</span><span class="box">✓</span></div>
+<div class="k-check-row" aria-checked="false"><span class="thumb">🕯️</span><span>LED candle set</span><span class="price num">$6.00</span><span class="box off"></span></div>
+</div>
+<span class="k-eyebrow">Send to</span>
+<div class="k-radio-card" aria-checked="true"><div>Visa 4242<small>Back by Dec 2</small></div><span class="dot"></span></div>
+<div class="k-radio-card" aria-checked="false"><div>Store credit<small>Today, +10%</small></div><span class="dot"></span></div>
+</div>
+<div class="df"><button class="k-btn">Cancel</button><button class="k-btn ink">Refund $92.00 to Visa</button></div>
+</aside>
+</body></html>

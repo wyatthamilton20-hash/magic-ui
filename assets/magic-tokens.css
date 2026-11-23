@@ -1,11 +1,11 @@
 /*
- * kargul-tokens.css — Kargul visual language as Tailwind v4 tokens.
+ * magic-tokens.css — Magic visual language as Tailwind v4 tokens.
  * Derived from kargulstudio/sales-crm (MIT). See ../NOTICE.
  *
  * Drop-in for a shadcn-style Vite/Next project:
  *   @import "tailwindcss";
  *   @import "tw-animate-css";
- *   @import "./kargul-tokens.css";
+ *   @import "./magic-tokens.css";
  *
  * Theme switch: `.dark` on <html> (next-themes attribute="class"). :root is LIGHT.
  * Reference app was dark-only; the light set below is derived (see references/tokens.md

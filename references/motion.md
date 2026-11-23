@@ -1,4 +1,4 @@
-# Kargul motion
+# Magic motion
 
 Character: fast, quiet, GSAP "power" curves. Everything is a fade/scale/slide with power3; no bounce, no
 stagger in the work surface. Blur only in two places: modal backdrops, and the act-in-place drawer below. Feedback is color first; motion only on things that appear, disappear,
@@ -65,7 +65,7 @@ mounts a new column on the left without remounting the others. CSS version moves
 | Primary success | label cross-fades to `✓ Done` (150ms), hold 600ms, then drawer out |
 | Toast | `opacity 0→1`, `translateY 8→0`, 200ms power3-out; out 150ms power3-in after 5s or on Undo |
 
-Reduced motion: no scale, no blur; fades only (handled in `kargul-plain.css`).
+Reduced motion: no scale, no blur; fades only (handled in `magic-plain.css`).
 
 ## One-off scene build (R8)
 
@@ -85,7 +85,7 @@ with reduced motion.
 
 ## Reduced motion
 
-The reference has no reduced-motion handling; this skill adds it (in `kargul-tokens.css`):
+The reference has no reduced-motion handling; this skill adds it (in `magic-tokens.css`):
 
 - tw-animate enter/exit transforms neutralized (`--tw-enter-scale: 1`, `--tw-*-translate-*: 0`), so
   popups/sheets only fade.

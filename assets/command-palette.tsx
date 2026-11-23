@@ -1,4 +1,4 @@
-// ⌘K command palette: cmdk list inside a @base-ui/react Dialog, Kargul styling.
+// ⌘K command palette: cmdk list inside a @base-ui/react Dialog, Magic styling.
 // Reference (kargulstudio/sales-crm components/_ui/command.tsx + command-menu.tsx, MIT) used cmdk +
 // radix Dialog. Deps: cmdk (npm i cmdk), @base-ui/react.
 import { useEffect, type ComponentProps, type ReactNode } from "react";

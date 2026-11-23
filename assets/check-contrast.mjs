@@ -1,10 +1,10 @@
 #!/usr/bin/env node
-// Re-measure WCAG 2.x contrast for the Kargul text tokens in both themes.
-// Usage: node check-contrast.mjs [path/to/kargul-tokens.css]
+// Re-measure WCAG 2.x contrast for the Magic text tokens in both themes.
+// Usage: node check-contrast.mjs [path/to/magic-tokens.css]
 // Reads :root (light) and .dark blocks; prints ratio of each text token on each surface.
 import { readFileSync } from "node:fs";
 
-const file = process.argv[2] ?? new URL("./kargul-tokens.css", import.meta.url);
+const file = process.argv[2] ?? new URL("./magic-tokens.css", import.meta.url);
 const css = readFileSync(file, "utf8");
 
 function block(selector) {

@@ -1,11 +1,11 @@
-// Kargul split-label filter menu ("Sort by | Pipeline value ⌄") on @base-ui/react Menu.
+// Magic split-label filter menu ("Sort by | Pipeline value ⌄") on @base-ui/react Menu.
 // Reference (kargulstudio/sales-crm components/_common/filter-menu.tsx, MIT) used radix-ui DropdownMenu;
 // mapping: data-[state=open] → data-popup-open (trigger) / data-open (popup),
 // asChild → className/render, sideOffset on Content → on Positioner,
 // --radix-dropdown-menu-content-available-height → --available-height, data-[state=checked] → data-checked.
 import { Menu } from "@base-ui/react/menu";
 import { cn } from "@/lib/utils";
-import { buttonVariants } from "./kargul-variants";
+import { buttonVariants } from "./magic-variants";
 
 export type FilterOption = { value: string; label: string };
 

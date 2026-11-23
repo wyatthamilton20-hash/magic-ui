@@ -1,5 +1,5 @@
 // GSAP-style power easings as cubic-bezier tuples (from kargulstudio/sales-crm lib/easings.ts, MIT).
-// Same curves are exposed to Tailwind as `ease-power3-out` etc. by kargul-tokens.css.
+// Same curves are exposed to Tailwind as `ease-power3-out` etc. by magic-tokens.css.
 // Use with motion/react: transition={{ duration: 0.2, ease: ease.power3Out }}
 
 type Bezier = [number, number, number, number];

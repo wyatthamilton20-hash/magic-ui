@@ -1,8 +1,8 @@
-# Kargul component recipes
+# Magic component recipes
 
-All class strings assume `assets/kargul-tokens.css` is loaded and `cn` = clsx + tailwind-merge
+All class strings assume `assets/magic-tokens.css` is loaded and `cn` = clsx + tailwind-merge
 (`@/lib/utils`). Hard-coded hexes from the reference are already replaced by tokens. Ready-made strings live in
-`assets/kargul-variants.ts` (`buttonVariants`, `tagVariants`, `k.*`).
+`assets/magic-variants.ts` (`buttonVariants`, `tagVariants`, `k.*`).
 
 ## 0. Primitive mapping (reference = `radix-ui` + `cmdk`; target = `@base-ui/react` / shadcn-base)
 
@@ -267,7 +267,7 @@ Base UI popup recipe (interruptible transitions instead of keyframes):
 ```
 
 Sheet (Base UI Dialog): `transition-[translate] duration-350 ease-power3-out data-starting-style:translate-x-full data-ending-style:translate-x-full data-ending-style:duration-250 data-ending-style:ease-power3-in motion-reduce:transition-opacity motion-reduce:data-starting-style:translate-x-0 motion-reduce:data-starting-style:opacity-0 motion-reduce:data-ending-style:translate-x-0 motion-reduce:data-ending-style:opacity-0`.
-(shadcn-base sheet ships `translate-x-[2.5rem]` + fade at 200ms ease-in-out — replace with the above to get the Kargul full-width slide.)
+(shadcn-base sheet ships `translate-x-[2.5rem]` + fade at 200ms ease-in-out — replace with the above to get the Magic full-width slide.)
 
 ## 8. Tabs (underline)
 

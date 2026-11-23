@@ -1,4 +1,4 @@
-/* Kargul fit audit: paste into the page (devtools or a browser tool) and call fitAudit().
+/* Magic fit audit: paste into the page (devtools or a browser tool) and call fitAudit().
    Edit ROOTS, SCROLLERS and PAIRS for the page. Returns JSON: overflow, per-container overflow,
    clipped text and overlapping overlays. Everything should be 0 / empty. */
 window.fitAudit = (opts = {}) => {

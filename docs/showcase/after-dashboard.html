@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>After: dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/magic-plain.css">
+<script>if(location.hash==='#dark')document.documentElement.dataset.theme='dark'</script>
+<style>
+html,body{height:100%}body{display:flex;flex-direction:column;overflow:hidden}
+.bar{height:56px;display:flex;align-items:center;gap:16px;padding:0 24px;border-bottom:1px solid var(--border)}
+.logo{font-weight:600;letter-spacing:-.01em;display:flex;align-items:center;gap:8px}.logo i{width:18px;height:18px;border-radius:5px;background:var(--foreground)}
+.bar .k-asof{margin-left:auto}
+header{padding:22px 24px 16px;display:flex;align-items:flex-end;justify-content:space-between}
+h1{margin:0;font-size:22px;font-weight:600;letter-spacing:-.02em}
+.say{margin:6px 0 0;color:var(--muted-foreground)}.say b{color:var(--foreground);font-weight:500}.say a{color:var(--primary);text-decoration:none;font-weight:500}
+.work{flex:1;min-height:0;padding:0 24px 24px;display:grid;grid-template-columns:1fr 340px;grid-template-rows:auto 1fr;gap:16px}
+.strip{grid-column:1/-1;display:grid;grid-template-columns:repeat(4,1fr)}
+.strip>div{padding:14px 18px 16px}.strip>div+div{border-left:1px solid var(--border)}
+.strip .k-label{display:block;margin-bottom:10px}
+.strip .k-ticks,.strip .k-meter{margin-top:12px}
+.hd{display:flex;align-items:center;justify-content:space-between;padding:14px 16px 10px}
+.hd h2{margin:0;font-size:14px;font-weight:500}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;font:500 11px var(--font-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--subtle);padding:8px 16px;border-bottom:1px solid var(--border)}
+td{padding:0 16px;height:52px;border-bottom:1px solid var(--border)}td .k-meta{display:block;font-size:11px}
+td.r,th.r{text-align:right}.why{color:var(--muted-foreground)}
+.side{display:flex;flex-direction:column;gap:16px;min-height:0}
+.side .k-card{padding:0 0 16px}.side .k-bars,.side .k-rank{margin:6px 16px 0}
+</style></head><body>
+<div class="bar"><span class="logo"><i></i>Harbor &amp; Pine</span>
+<nav class="k-seg"><button aria-pressed="true">Overview</button><button>Pipeline</button><button>Orders</button><button>About</button></nav>
+<span class="k-asof">Synced 2 min ago</span></div>
+<header><div><h1>November</h1>
+<p class="say"><b>$412K</b> booked, <b>6% ahead</b> of plan · 3 quotes expire this week · <a href="#">Review Kailua wedding</a></p></div>
+<button class="k-btn primary">+ New quote</button></header>
+<div class="work">
+<div class="k-card strip">
+<div><span class="k-label">Booked</span><div class="k-num">$412K<span class="unit">of $390K</span></div><div class="k-ticks"><i style="width:100%"></i><b style="left:94%"></b></div></div>
+<div><span class="k-label">Open quotes</span><div class="k-num">$186K<span class="unit">· 24</span></div><div class="k-meter"><i style="width:48%"></i></div></div>
+<div><span class="k-label">Close rate</span><div class="k-num">41<span class="of">%</span></div><div class="k-meter"><i style="width:41%"></i></div></div>
+<div><span class="k-label">Days to sign</span><div class="k-num">4.6<span class="unit">days, median</span></div><div class="k-split" style="margin-top:12px"><span style="flex:3">Quote</span><span class="agent" style="flex:1"></span><span style="flex:2">Deposit</span></div></div>
+</div>
+<div class="k-card" style="min-height:0">
+<div class="hd"><h2>Needs you</h2><div class="k-seg"><button aria-pressed="true">All 6</button><button>Expiring 3</button><button>Unpaid 2</button></div></div>
+<table><tr><th>Event</th><th>Status</th><th>Why it matters</th><th class="r">Value</th></tr>
+<tr class="k-crit"><td>Kailua Beach wedding<span class="k-meta">Q-2093 · Sat 5 Dec</span></td><td><span class="k-pill act">Expires today</span></td><td class="why">Holds the last 40×80 tent</td><td class="r num">$18,400</td></tr>
+<tr><td>Lanikai Foundation gala<span class="k-meta">Q-2081 · Sat 19 Dec</span></td><td><span class="k-pill wait">Deposit due Fri</span></td><td class="why">Largest order this month</td><td class="r num">$42,100</td></tr>
+<tr><td>Ocean Tech holiday party<span class="k-meta">Q-2077 · Sat 12 Dec</span></td><td><span class="k-pill risk">2 days late</span></td><td class="why">Lighting crew not booked</td><td class="r num">$6,250</td></tr>
+<tr><td>Makai Yacht Club brunch<span class="k-meta">Q-2075 · Sun 13 Dec</span></td><td><span class="k-pill ok">Signed</span></td><td class="why"></td><td class="r num">$3,880</td></tr>
+<tr><td>Hale Kai retreat<span class="k-meta">Q-2072 · Thu 17 Dec</span></td><td><span class="k-pill wait">Unpaid 9 days</span></td><td class="why">Card on file declined</td><td class="r num">$7,920</td></tr>
+<tr><td>Waimānalo farm dinner<span class="k-meta">Q-2069 · Fri 18 Dec</span></td><td><span class="k-pill">Draft</span></td><td class="why"></td><td class="r num">$2,410</td></tr>
+</table></div>
+<div class="side">
+<div class="k-card"><div class="hd"><h2>Booked by week</h2><span class="k-meta">$K</span></div>
+<div class="k-bars"><div><span><i style="height:52%"></i></span><em>W41</em></div><div><span><i style="height:64%"></i></span><em>W42</em></div><div><span><i style="height:48%"></i></span><em>W43</em></div><div><span><i style="height:71%"></i></span><em>W44</em></div><div><span><i style="height:80%"></i></span><em>W45</em></div><div><span><i style="height:66%"></i></span><em>W46</em></div><div><span><i style="height:88%"></i></span><em>W47</em></div><div class="now"><span><i style="height:34%"></i></span><em>W48</em></div></div></div>
+<div class="k-card"><div class="hd"><h2>By rep</h2><span class="k-meta">booked</span></div>
+<div class="k-rank"><span class="on">Leilani</span><i><b style="width:92%"></b></i><span class="num">$148K</span><span>Marcus</span><i><b style="width:70%"></b></i><span class="num">$112K</span><span>Priya</span><i><b style="width:58%"></b></i><span class="num">$94K</span><span>Dana</span><i><b style="width:36%"></b></i><span class="num">$58K</span></div></div>
+</div></div>
+</body></html>

@@ -1,5 +1,5 @@
 // Segmented meter (win probability, pipeline health). Adapted from kargulstudio/sales-crm (MIT).
-// Requires kargul-tokens.css (bg-danger/warning/success, bg-track, bg-meter) and a shadcn `cn`.
+// Requires magic-tokens.css (bg-danger/warning/success, bg-track, bg-meter) and a shadcn `cn`.
 import { cn } from "@/lib/utils";
 
 type SegmentTone = "auto" | "danger" | "warning" | "success";

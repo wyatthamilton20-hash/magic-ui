@@ -3,7 +3,7 @@ name: magic-ui
 description: Master design skill for anything dashboard related (dashboards, consoles, ops and map views, CRM and admin UIs, KPI pages) and for slide decks in the same look (pitches, reviews, readouts via the Slides artifact type), in the Kargul Studio visual language from the MIT kargulstudio/sales-crm reference. Use when designing, building, restyling, decluttering or reviewing any dashboard, in React + Tailwind v4 or as a single HTML file or Claude artifact. Covers copy rules (fewer words, show exceptions), page anatomy, map-first floating-card and table-first layouts, fit-to-one-screen with no scrolling, KPI tiles, the sidebar shell, header tabs, dense tables, outline grids, filter menus, tags and badges, segment bars, sparklines, a cmd-K palette, overlays and motion, pill buttons with layered shadows, a measured fit audit, and process-mapping patterns (handoff map, three-state ownership, gaps panel, knowledge pages, hierarchy switcher). Ships light and dark tokens with WCAG contrast, plus a framework-free CSS version.
 ---
 
-# Kargul UI
+# Magic UI
 
 A quiet, dense, near-monochrome work surface. One indigo CTA per view, color reserved for data
 (tags, segment bars, sparklines, status dots), hierarchy from six grey text steps instead of size.
@@ -19,7 +19,7 @@ copy rules, layouts, fit-to-screen recipe and verification that sit on top of th
 | The ask | Mode | Read |
 |---|---|---|
 | dashboard, console, admin, CRM, ops/map view, KPI page, a screen in an app | Dashboard (default) | `references/dashboards.md`, then components/tokens as needed |
-| deck, slides, pitch, review, readout, one slide | Slides | `references/slides.md` + `assets/kargul-deck.css` |
+| deck, slides, pitch, review, readout, one slide | Slides | `references/slides.md` + `assets/magic-deck.css` |
 | About tab, docs page, long read inside a dashboard | Document | dashboards.md §2 (About) |
 
 All modes share one palette, one type pair (Inter + IBM Plex Mono), the noise budget and `references/sources.md`.
@@ -32,25 +32,25 @@ Never mix modes in one file: a deck does not embed dashboard chrome, a dashboard
 | `references/dashboards.md` | dashboard playbook: copy rules, page anatomy, map-first / table-first / process layouts, handoff map (§3h), three-state ownership (§3c), gaps panel (§3i), knowledge pages, hierarchy switcher, generated header sentence, sensitive subjects (§8), fit one screen, KPI tile, verification, single-file and artifact notes |
 | `references/sources.md` | the 8-reference pass (2026-11): what each reference gave and where it lives; Process Atlas applied example; pulling references from X; read before inventing a new pattern |
 | `references/slides.md` | slides mode: where decks go (Slides artifact type), 25-word slide budget, 5-size type scale, 11 slide kinds, motion, checks |
-| `assets/kargul-deck.css` | publish as `project/deck.css` in a Slides artifact: tokens, type scale, index, hero number, KPI strip, cards, pills, table, meters, footer, rise motion |
+| `assets/magic-deck.css` | publish as `project/deck.css` in a Slides artifact: tokens, type scale, index, hero number, KPI strip, cards, pills, table, meters, footer, rise motion |
 | `references/tokens.md` | every color token light↔dark with contrast ratios, tag tones, radii, spacing, shadows, easings, type scale, fonts, install steps |
 | `references/components.md` | class recipes + TSX for shell, sidebar, header, table, outline grid, filter menu, tags, badges, segment bar, sparkline, command, overlays, tabs, buttons, inputs, cards; Radix → Base UI mapping |
 | `references/motion.md` | curves, per-element durations, recipes, what never animates, reduced motion |
-| `assets/kargul-tokens.css` | drop-in Tailwind v4 block: `:root` light, `.dark` dark, `@theme inline`, easings, `@utility` type scale, reduced-motion |
-| `assets/kargul-variants.ts` | `buttonVariants`, `tagVariants` (cva) and `k.*` class strings |
+| `assets/magic-tokens.css` | drop-in Tailwind v4 block: `:root` light, `.dark` dark, `@theme inline`, easings, `@utility` type scale, reduced-motion |
+| `assets/magic-variants.ts` | `buttonVariants`, `tagVariants` (cva) and `k.*` class strings |
 | `assets/filter-menu.tsx` | split-label single-select menu on `@base-ui/react` Menu |
 | `assets/command-palette.tsx` | cmdk + Base UI Dialog palette parts + `useCommandShortcut` |
 | `assets/segment-bar.tsx`, `assets/sparkline.tsx` | data micro-visuals (plain React) |
 | `assets/sliding-number.tsx` / `sliding-number-css.tsx` | odometer digits (motion spring / zero-dep CSS) |
 | `assets/sidebar-resizer.tsx` | drag + keyboard resizable sidebar edge, persisted width |
 | `assets/easings.ts` | power curves as bezier tuples, durations, spring |
-| `assets/kargul-plain.css` | tokens + core classes (`.k-card`, `.k-float`, `.k-tile`, `.k-btn`, `.k-seg`, `.k-chip`, `.k-tag`, `.k-row`, `.k-meter`, `.k-fade`) plus the reference-pass set (`.k-num`, `.k-ticks`, `.k-pips`, `.k-split`, `.k-req`, `.k-pill`, `.k-well`, `.k-drawer`, `.k-dimmable`, `.k-radio-card`, `.k-check-row`, `.k-toast`, `.k-bars`, `.k-rank`, `.k-asof`, `.k-kbd`) plus `.k-mode` (`.human|.assist|.auto`) and `.k-gap` without Tailwind |
+| `assets/magic-plain.css` | tokens + core classes (`.k-card`, `.k-float`, `.k-tile`, `.k-btn`, `.k-seg`, `.k-chip`, `.k-tag`, `.k-row`, `.k-meter`, `.k-fade`) plus the reference-pass set (`.k-num`, `.k-ticks`, `.k-pips`, `.k-split`, `.k-req`, `.k-pill`, `.k-well`, `.k-drawer`, `.k-dimmable`, `.k-radio-card`, `.k-check-row`, `.k-toast`, `.k-bars`, `.k-rank`, `.k-asof`, `.k-kbd`) plus `.k-mode` (`.human|.assist|.auto`) and `.k-gap` without Tailwind |
 | `assets/fit-audit.js` | `fitAudit({roots,scrollers,pairs})` in the page: page overflow, container overflow, clipped text, overlapping overlays |
 | `assets/check-contrast.mjs` | `node check-contrast.mjs [tokens.css]`, which re-measures every text pair in both themes |
 | `NOTICE` | MIT attribution (Kargul Studio, motion-primitives) |
 
 TSX assets import `cn` from `@/lib/utils` (shadcn convention) and expect the token CSS to be loaded. Single-file
-pages use `kargul-plain.css` instead.
+pages use `magic-plain.css` instead.
 
 ## Workflow
 
@@ -61,7 +61,7 @@ pages use `kargul-plain.css` instead.
    `@base-ui/react`), the theme switch (`.dark` class?), and the font setup. Read the project's own
    AGENTS/CLAUDE/design docs first. Project rules win where they conflict. Ask before replacing a brand
    palette the owner chose.
-2. **Install tokens.** Copy `assets/kargul-tokens.css` next to the entry CSS and import it after
+2. **Install tokens.** Copy `assets/magic-tokens.css` next to the entry CSS and import it after
    `tailwindcss` + `tw-animate-css`. Remove the old shadcn `:root`/`.dark`/`@theme inline` color blocks, and keep
    project-only tokens (charts, brand) in their own block. Back up any file you overwrite if the project asks.
 3. **Restyle primitives in place.** Swap class strings in the existing `components/ui/*` using

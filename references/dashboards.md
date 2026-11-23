@@ -1,6 +1,6 @@
 # Dashboards playbook
 
-How to build any dashboard, console or ops view in the Kargul language. Kargul gives you the tokens and
+How to build any dashboard, console or ops view in the Magic language. Magic gives you the tokens and
 components; this file adds the decisions on top of them: what text to show, how to lay out the screen,
 how to fit one screen at every size, and how to prove it.
 
@@ -306,7 +306,7 @@ wizards, and use a cache-busting query (`?v=N`) on every reload, because local s
 
 When there is no Tailwind (one HTML file, a Claude artifact, a demo):
 
-- Load `assets/kargul-plain.css` tokens and classes inline, plus Inter from Google Fonts (mono: IBM Plex Mono
+- Load `assets/magic-plain.css` tokens and classes inline, plus Inter from Google Fonts (mono: IBM Plex Mono
   for data). Light only is fine when the owner asks; then set every color explicitly and give `body` a
   background.
 - Layer overrides at the end of the stylesheet in named blocks (`/* ===== polish ===== */`) instead of

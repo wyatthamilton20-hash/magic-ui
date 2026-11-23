@@ -1,6 +1,6 @@
-// Class recipes for the Kargul look, as cva variants + string constants.
+// Class recipes for the Magic look, as cva variants + string constants.
 // Source: kargulstudio/sales-crm components/_ui/* (MIT), hard-coded hexes replaced by
-// kargul-tokens.css tokens so the same classes work in light and dark.
+// magic-tokens.css tokens so the same classes work in light and dark.
 import { cva, type VariantProps } from "class-variance-authority";
 
 export const buttonVariants = cva(

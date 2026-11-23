@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Before: refund</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}body{margin:0;font:14px/1.5 Poppins,sans-serif;background:#f4f6fb;color:#1e2235;height:100vh;overflow:hidden}
+main{padding:28px 32px}
+h2{margin:0 0 4px;font-size:24px}p.sub{margin:0 0 20px;color:#7a7f99}
+.card{background:#fff;border-radius:16px;padding:20px;box-shadow:0 8px 24px rgba(30,34,53,.06);border:1px solid #eef0f6}
+.tools{display:flex;gap:10px;margin-bottom:14px}.tools input{flex:1;border:1px solid #e3e6f0;border-radius:10px;padding:10px 14px;font:inherit}
+.btn{border:0;border-radius:10px;padding:10px 16px;font:600 13px Poppins;color:#fff;background:#6366f1}
+.btn.w{background:#fff;color:#1e2235;border:1px solid #e3e6f0}.btn.r{background:#ef4444}.btn.g{background:#10b981}
+table{width:100%;border-collapse:collapse;font-size:13px}th{text-align:left;color:#9aa0b8;font-weight:500;padding:10px 8px;border-bottom:1px solid #eef0f6}
+td{padding:12px 8px;border-bottom:1px solid #f3f4f8}
+.st{padding:3px 10px;border-radius:20px;font-size:11px;font-weight:600}
+.scrim{position:fixed;inset:0;background:rgba(15,23,42,.55)}
+.modal{position:fixed;left:50%;top:50%;translate:-50% -50%;width:560px;background:#fff;border-radius:18px;padding:26px;box-shadow:0 30px 60px rgba(0,0,0,.3)}
+.modal h3{margin:0 0 4px;font-size:20px}.modal .hint{color:#7a7f99;font-size:13px;margin:0 0 16px}
+label{display:block;font-size:13px;font-weight:600;margin:14px 0 6px}
+select,textarea,input.f{width:100%;border:1px solid #e3e6f0;border-radius:10px;padding:10px 12px;font:inherit;background:#fff}
+.note{font-size:12px;color:#9aa0b8;margin-top:4px}
+.warn{margin-top:16px;background:#fef3c7;border:1px solid #fde68a;color:#92400e;border-radius:10px;padding:10px 12px;font-size:12px}
+.foot{display:flex;justify-content:flex-end;gap:10px;margin-top:20px}
+.x{position:absolute;right:20px;top:18px;font-size:20px;color:#9aa0b8}
+</style></head><body><main>
+<h2>Orders Management 📦</h2><p class="sub">View, search, and manage all of your customer orders in one place.</p>
+<div class="card"><div class="tools"><input placeholder="🔍 Search orders by ID, customer name, or email..."><button class="btn w">Filters</button><button class="btn w">Export CSV</button><button class="btn">+ Create Order</button></div>
+<table><tr><th>Order ID</th><th>Customer</th><th>Email</th><th>Date</th><th>Items</th><th>Total</th><th>Payment</th><th>Status</th><th>Actions</th></tr>
+<tr><td>#ORD-20931</td><td>Maya Kealoha</td><td>maya.k@example.com</td><td>2026-11-20</td><td>4</td><td>$98.00</td><td>Visa •••• 4242</td><td><span class="st" style="background:#dcfce7;color:#15803d">Delivered</span></td><td><button class="btn r" style="padding:4px 10px">Refund</button></td></tr>
+<tr><td>#ORD-20930</td><td>Daniel Ito</td><td>dan.ito@example.com</td><td>2026-11-19</td><td>2</td><td>$240.00</td><td>Mastercard •••• 8812</td><td><span class="st" style="background:#dbeafe;color:#1d4ed8">Shipped</span></td><td><button class="btn r" style="padding:4px 10px">Refund</button></td></tr>
+<tr><td>#ORD-20929</td><td>Sofia Reyes</td><td>sofia.r@example.com</td><td>2026-11-19</td><td>7</td><td>$1,120.00</td><td>Amex •••• 1005</td><td><span class="st" style="background:#fef3c7;color:#b45309">Processing</span></td><td><button class="btn r" style="padding:4px 10px">Refund</button></td></tr>
+<tr><td>#ORD-20928</td><td>Noah Akana</td><td>noah.a@example.com</td><td>2026-11-18</td><td>1</td><td>$64.00</td><td>Visa •••• 0077</td><td><span class="st" style="background:#dcfce7;color:#15803d">Delivered</span></td><td><button class="btn r" style="padding:4px 10px">Refund</button></td></tr>
+</table></div></main>
+<div class="scrim"></div>
+<div class="modal"><span class="x">✕</span><h3>Process Refund</h3><p class="hint">Please fill out the form below to process a refund for this order. All fields marked with * are required.</p>
+<label>Order ID *</label><input class="f" value="#ORD-20931">
+<label>Select Items to Refund *</label><select><option>4 items selected</option></select><div class="note">Items below are picked from the original order. Use Ctrl/Cmd to select multiple.</div>
+<label>Refund Method *</label><select><option>Original payment method</option></select>
+<label>Reason for Refund *</label><textarea rows="2" placeholder="Enter reason..."></textarea>
+<div class="warn">⚠️ Please note: Refunds may take 5-10 business days to appear depending on the customer's bank. This action cannot be undone.</div>
+<div class="foot"><button class="btn w">Cancel</button><button class="btn">Submit</button></div></div>
+</body></html>

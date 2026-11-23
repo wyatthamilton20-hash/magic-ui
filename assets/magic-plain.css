@@ -1,6 +1,6 @@
 /*
- * kargul-plain.css: Kargul tokens + core classes without Tailwind.
- * For single-file pages, Claude artifacts and demos. Same token names as kargul-tokens.css.
+ * magic-plain.css: Magic tokens + core classes without Tailwind.
+ * For single-file pages, Claude artifacts and demos. Same token names as magic-tokens.css.
  * Light on :root. Dark on .dark or [data-theme="dark"]. For light-only pages, drop the dark block
  * and keep body's explicit background.
  * Fonts: Inter (Google Fonts) for UI, a mono (IBM Plex Mono) only for tabular data.

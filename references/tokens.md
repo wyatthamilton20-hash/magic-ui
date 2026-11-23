@@ -1,8 +1,8 @@
-# Kargul tokens
+# Magic tokens
 
 Source: `app/globals.css` in kargulstudio/sales-crm (dark-only). The light column is derived here; every
 dark token has a light counterpart with the same job and the same rank in the hierarchy.
-Drop-in CSS: **`assets/kargul-tokens.css`** (`:root` = light, `.dark` = dark, `@theme inline` mapping,
+Drop-in CSS: **`assets/magic-tokens.css`** (`:root` = light, `.dark` = dark, `@theme inline` mapping,
 `@theme static` easings, `@utility` type scale, reduced-motion block). Re-measure after any edit:
 `node assets/check-contrast.mjs`.
 
@@ -12,14 +12,14 @@ Drop-in CSS: **`assets/kargul-tokens.css`** (`:root` = light, `.dark` = dark, `@
 /* src/index.css */
 @import "tailwindcss";
 @import "tw-animate-css";
-@import "./styles/kargul-tokens.css";   /* copied from assets/ */
+@import "./styles/magic-tokens.css";   /* copied from assets/ */
 ```
 
 - If the project's `index.css` already has shadcn `:root` / `.dark` / `@theme inline` blocks, **replace** them
-  (Kargul defines every shadcn token: background, foreground, card, popover, primary, secondary, muted, accent,
+  (Magic defines every shadcn token: background, foreground, card, popover, primary, secondary, muted, accent,
   destructive, border, input, ring, sidebar-*). Keep project-only tokens (e.g. `--chart-*`, brand colors) in a
   separate block after the import. Do not keep two `@custom-variant dark` lines.
-- `@import "shadcn/tailwind.css"` can stay; Kargul tokens only set variables.
+- `@import "shadcn/tailwind.css"` can stay; Magic tokens only set variables.
 - Theme switching: `.dark` class on `<html>` (next-themes `attribute="class"`, `disableTransitionOnChange`).
   One mechanism only; do not also use `prefers-color-scheme`.
 - Fonts: `npm i @fontsource-variable/inter` and `@import "@fontsource-variable/inter/opsz.css";` (Inter 4 with
@@ -57,7 +57,7 @@ background, card, popover, muted, sidebar. Text needs 4.5 (AA body), 3.0 for ≥
 |---|---|---|---|---|
 | `--border` / `--sidebar-border` | `#ebebeb` | `#232323` | 1.16 / 1.15 | table row dividers, page section lines, sidebar edges |
 | `--line-strong` | `#dedede` | `#393939` | 1.31 / 1.57 | popover/dialog/sheet borders, header/footer dividers, stat tiles |
-| `--input` | `#d4d4d4` | `#393939` | 1.44 / 1.57 | shadcn input border (Kargul inputs use `line-strong`) |
+| `--input` | `#d4d4d4` | `#393939` | 1.44 / 1.57 | shadcn input border (Magic inputs use `line-strong`) |
 | `--ring` / `--sidebar-ring` | `#8a8a8a` | `#676767` | 3.36 / 3.20 | focus border, `ring-ring/60` |
 | `--track` | `#e4e4e4` | `#3a3a3a` | 1.24 / 1.59 | empty segment, slider track |
 | `--pill-border` | `#e0e0e0` | `#363636` | — | status pill border (ref `#363636`) |

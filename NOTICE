@@ -7,9 +7,9 @@ This skill derives design tokens, class recipes and component code from:
   Copyright (c) 2026 Kargul Studio
   Licensed under the MIT License (text below).
 
-Files adapted from it: assets/kargul-tokens.css (dark values, easings, type scale, spacing tokens),
+Files adapted from it: assets/magic-tokens.css (dark values, easings, type scale, spacing tokens),
 assets/easings.ts, assets/segment-bar.tsx, assets/sparkline.tsx, assets/sliding-number.tsx,
-assets/sidebar-resizer.tsx, assets/filter-menu.tsx, assets/command-palette.tsx, assets/kargul-variants.ts,
+assets/sidebar-resizer.tsx, assets/filter-menu.tsx, assets/command-palette.tsx, assets/magic-variants.ts,
 and the class recipes quoted in references/*.md. The light palette, contrast measurements, Base UI ports,
 sliding-number-css.tsx and check-contrast.mjs are new work in this skill.
 
