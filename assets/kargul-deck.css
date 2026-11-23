@@ -1,0 +1,92 @@
+/* kargul-deck.css: Kargul slides for the Slides artifact type (1920×1080 canvas, 128px margins).
+   Publish as project/deck.css. Style slides with classes on <section>, never #id rules.
+   Faces in deck.json: Inter (text) + IBM Plex Mono (numbers, eyebrows). Sources: references/sources.md R1–R7. */
+
+section{
+  --k-bg:#f7f7f6;--k-card:#ffffff;--k-well:#efefed;--k-ink:#111214;--k-soft:#3d3d3d;--k-muted:#5f5f5f;--k-subtle:#6b6b6b;
+  --k-line:#e2e2df;--k-track:#e4e4e4;--k-accent:#4124fb;--k-on-accent:#f9fbff;--k-dark:#121314;
+  --k-warn:#a64b07;--k-warn-bg:#fdf5ea;--k-ok:#147a3b;--k-ok-bg:#ecf8f0;--k-risk:#c81e1e;--k-risk-bg:#fdf0f1;
+  --k-sans:"Inter",system-ui,sans-serif;--k-mono:"IBM Plex Mono",ui-monospace,monospace;
+  background:var(--k-bg);color:var(--k-ink);font-family:var(--k-sans);
+  padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px;box-sizing:border-box;
+}
+/* surfaces */
+section.k-dark{background:var(--k-dark);color:#f5f6f8;--k-muted:#a4a4a4;--k-subtle:#8f8f8f;--k-line:#2b2b2b;--k-card:#1b1c1e;--k-well:#222326;--k-track:#3a3a3a;--k-soft:#cfcfcf}
+section.k-accent{background:var(--k-accent);color:var(--k-on-accent);--k-muted:#d9d3ff;--k-subtle:#c9c1ff;--k-line:rgba(255,255,255,.22)}
+section.k-center{justify-content:center}
+section.k-cover{justify-content:flex-end}
+/* fill ~70% of the slide: put .k-fill on the slide's main block */
+section .k-fill{flex:1;min-height:0}
+section .k-cards.k-fill>.k-card,section .k-strip.k-fill>div{justify-content:space-between}
+section .k-rowlist.k-fill>div{flex:1}
+
+/* type scale: 168 numeral / 88 statement / 56 title / 32 body / 24 meta. Nothing under 24. */
+section h1{font-size:88px;line-height:1.04;font-weight:600;letter-spacing:-.03em;margin:0;max-width:1500px}
+section h2{font-size:56px;line-height:1.1;font-weight:600;letter-spacing:-.02em;margin:0;max-width:1500px}
+section h3{font-size:32px;line-height:1.25;font-weight:600;letter-spacing:-.01em;margin:0}
+section p{font-size:32px;line-height:1.4;margin:0;color:var(--k-soft);max-width:1200px}
+section .k-eyebrow{font:500 24px var(--k-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--k-subtle)}
+section .k-meta{font:400 24px var(--k-mono);color:var(--k-muted)}
+section .k-muted{color:var(--k-muted)}
+section .k-hot{color:var(--k-accent)}
+section.k-accent .k-hot,section.k-dark .k-hot{color:inherit;text-decoration:underline;text-decoration-thickness:4px;text-underline-offset:10px}
+section .k-warn{color:var(--k-warn)}section .k-risk{color:var(--k-risk)}section .k-ok{color:var(--k-ok)}
+
+/* big numeral + tiny label (R4, R7) */
+section .k-num{font-size:168px;line-height:.95;font-weight:500;letter-spacing:-.045em;font-variant-numeric:tabular-nums;margin:0}
+section .k-num .k-of{color:var(--k-subtle);font-weight:400}
+section .k-num-sm{font-size:96px;line-height:1;font-weight:500;letter-spacing:-.04em;font-variant-numeric:tabular-nums;margin:0}
+
+/* section index 01 / 02 / 03 (R4) */
+section .k-index{display:flex;flex-direction:column}
+section .k-index-row{display:flex;align-items:baseline;gap:48px;padding:28px 0;border-top:2px solid var(--k-line)}
+section .k-index-row .k-meta{width:96px;flex:none}
+section .k-index-row h2{font-size:56px}
+section .k-index-row.k-on h2{color:var(--k-accent)}
+
+/* cards: KPI strip (R1) and card row */
+section .k-strip{display:flex;background:var(--k-card);border-radius:28px;box-shadow:0 2px 4px rgba(17,18,20,.06),0 0 0 2px rgba(17,18,20,.06)}
+section .k-strip>div{flex:1;padding:44px 48px;display:flex;flex-direction:column;gap:20px}
+section .k-strip>div+div{border-left:2px solid var(--k-line)}
+section .k-cards{display:flex;gap:32px}
+section .k-card{flex:1;background:var(--k-card);border-radius:28px;padding:44px;display:flex;flex-direction:column;gap:20px;box-shadow:0 2px 4px rgba(17,18,20,.06),0 0 0 2px rgba(17,18,20,.06)}
+section.k-dark .k-card{box-shadow:0 0 0 2px #2b2b2b}
+section .k-stack{display:flex;flex-direction:column;gap:16px}
+section .k-card .k-label{font-size:28px;font-weight:500;color:var(--k-muted);margin:0}
+
+/* pills by urgency (R6) */
+section .k-pill{display:inline-block;font-size:24px;font-weight:500;padding:6px 18px;border-radius:999px;background:var(--k-well);color:var(--k-soft)}
+section .k-pill.k-act{background:var(--k-ink);color:var(--k-bg)}
+section .k-pill.k-wait{background:var(--k-warn-bg);color:var(--k-warn)}
+section .k-pill.k-good{background:var(--k-ok-bg);color:var(--k-ok)}
+section .k-pill.k-bad{background:var(--k-risk-bg);color:var(--k-risk)}
+
+/* table */
+section table{border-collapse:collapse;width:100%;font-size:28px}
+section th{font-size:24px;font-weight:500;color:var(--k-subtle);text-align:left;padding:0 24px 18px 0;border-bottom:2px solid var(--k-line)}
+section td{padding:22px 24px 22px 0;border-bottom:2px solid var(--k-line);font-variant-numeric:tabular-nums}
+section td.k-r,section th.k-r{text-align:right}
+
+/* row list: use instead of a table when a column needs pills (table cells keep plain text only) */
+section .k-rowlist{display:flex;flex-direction:column}
+section .k-rowlist>div{display:flex;align-items:center;gap:48px;padding:22px 0;border-top:2px solid var(--k-line)}
+section .k-rowlist .k-pill{font-size:32px;padding:8px 24px}
+section .k-rowlist>div>.k-key{width:360px;flex:none;font-size:32px;font-weight:500;margin:0;color:var(--k-ink)}
+
+/* bars and meters (R5, R7) */
+section .k-bar{height:20px;border-radius:999px;background:var(--k-track);display:flex;overflow:hidden}
+section .k-bar>div{background:var(--k-accent);border-radius:999px}
+section .k-ticks{height:40px;background:repeating-linear-gradient(90deg,var(--k-track) 0 6px,transparent 6px 14px);display:flex}
+section .k-ticks>div{background:repeating-linear-gradient(90deg,var(--k-accent) 0 6px,transparent 6px 14px)}
+
+/* quote and figure */
+section .k-quote{font-size:64px;line-height:1.2;font-weight:500;letter-spacing:-.02em;margin:0;max-width:1400px}
+section .k-shot{width:1664px;height:640px;object-fit:contain;border-radius:24px;background:var(--k-card);box-shadow:0 0 0 2px var(--k-line)}
+
+/* footer band: one pinned 24px row */
+section .k-foot{position:absolute;left:128px;bottom:64px;width:1664px;display:flex;justify-content:space-between;font:400 24px var(--k-mono);color:var(--k-subtle)}
+
+/* motion: staged rise on arrival, whole slide in < 1s */
+@keyframes k-rise{from{opacity:0;transform:translateY(24px)}}
+section .k-rise{animation:k-rise .5s cubic-bezier(.25,1,.5,1) both}
+section .k-d1{animation-delay:.12s}section .k-d2{animation-delay:.24s}section .k-d3{animation-delay:.36s}
